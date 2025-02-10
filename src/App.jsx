@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Header from "C:/Programming/React/habit-tracker-app/src/Header.jsx"
+import Header from "/src/Header.jsx"
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Account from './Pages/Account'
 import Habits from '/src/Pages/Habits.jsx'
