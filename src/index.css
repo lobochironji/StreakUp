@@ -1,0 +1,42 @@
+body{
+  margin: 0px;
+  background-color: #2a2a2a;
+}
+
+header{
+  display: flex;
+  background-color:  #ADFF2F;
+  justify-content: center;
+  align-items: center;
+  font-family: "Poppins",serif;
+  height: 110px;
+  user-select: none;
+}
+
+.logo{
+  position: relative;
+  margin: 20px;
+}
+
+.logo:hover{
+  filter: drop-shadow(0 0 10px rgb(2, 190, 2))
+}
+.center{
+  width:90px;
+  animation: rotate 5s linear infinite;
+}
+
+.ring{
+  width:90px;
+  position: absolute;
+}
+
+@keyframes rotate{
+  from{
+  transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
+

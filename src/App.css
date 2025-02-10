@@ -1,0 +1,224 @@
+.habit-main{
+  display: flex;
+  gap: 20px;
+}
+.habit-main-open{
+  font-family: "Inter",serif;
+  margin-left: 220px  ;
+  width: 700px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.habit-main-close{
+  font-family: "Inter",serif;
+  margin-left: 70px  ;
+  width: 700px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.habit-main-top{
+  display: flex;
+  font-family:"Inter",serif;
+  color: rgb(248,249,253);
+  margin: 40px 0 20px 0;
+  justify-content: space-around;
+  border-radius: 10px;
+  background-color: rgb(23,23,23);
+  user-select: none;
+  gap: 300px;
+}
+
+.habit-main-top>h2{
+  margin-left: 10px;
+}
+
+.add-habit-button{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 35px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  font-size: 19px;
+  font-weight: 600;
+  transition: box-shadow 0.3s;
+  background-color: #ADFF2F;
+  color: rgb(23,23,23);
+  font-family: "Outfit",serif;
+}
+
+.add-habit-button:hover{
+  box-shadow: 0px 0px 8px #ADFF2F;
+}
+
+.habit-list{
+  display: flex;
+  position: relative;
+  list-style: none;
+  justify-content: space-between;
+  padding: 20px 10px;
+  font-size: 20px;  
+  border-bottom: 3px solid rgb(33,33,33);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  font-family: "Outfit",serif;
+}
+
+.habit-list:hover{
+  border: none;
+  background: rgb(50,50,50);
+  border-bottom: 3px solid rgb(33,33,33);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.habit-list-not-done{
+  color: rgb(248,249,253);
+}
+
+.habit-list-done{
+  color: rgb(0, 188, 0);
+}
+
+.habit-list-done::after{
+  color: rgb(0, 188, 0);
+  content:"(done)";
+  margin-left: 10px;
+}
+
+.habit-list-is-skipped{
+  color: rgb(255, 0, 0);
+}
+
+.habit-list-is-skipped::after{
+  color: rgb(255, 0, 0);
+  content:"(skipped)";
+  margin-left: 10px;
+}
+
+.habit-list-button{
+  display: flex;
+  align-items: center;
+  height: 25.6px;
+  border: none;
+  border-radius: 5px;  
+  font-size:15px;
+  background-color: #ADFF2F;
+  color: rgb(23,23,23);
+  outline: 2px solid #8dcc2f;
+}
+
+.drop-down-menu{
+  position: absolute;
+  top: 80%;
+  right: 0;
+  width: 150px;
+  height: 180px;
+  background: rgb(50,50,50);
+  border: 1px solid rgb(72,72,72);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+  z-index: 1;
+  animation: showup 0.15s linear;
+}
+@keyframes showup{
+  from{
+    opacity:0
+  }
+  to{
+    opacity:100
+  }
+}
+
+.drop-down-menu-content{
+  border-top: 2px solid rgb(72,72,72);
+  margin: 10px; 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.drop-down-menu-content>button{
+  font-family: "Outfit",serif;
+  font-size: 12px;
+  height: 40px; 
+  color: rgb(248,249,253);
+  background-color: #323232;
+  font-weight: 600;
+  border: none;
+  border-bottom: 2px solid rgb(72,72,72);
+}
+
+.drop-down-menu-content>button:hover{
+  font-family: "Outfit",serif;
+  font-size: 12px;
+  height: 40px; 
+  color: rgb(33,33,33);
+  font-weight: 600;
+  background-color: #adff2f;
+  border: none;
+  border-bottom: 2px solid rgb(72,72,72);
+  transition: background-color 0.5s ease;
+}
+
+.progress-bar-container{
+  font-family: "Outfit",serif;
+  background-color: rgb(23,23,23);
+  color:rgb(248,249,253);
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.progress-bar > h1{
+  color: #adff2d;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  padding: 10px;
+  width: 300px;
+  margin: auto;
+}
+
+.calendar-cell {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(50,50,50);
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+  user-select: none;
+}
+
+.calendar-cell-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  width: 40px;
+  height: 40px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: #adff2f;
+  color: rgb(23,23,23);
+  transition: background 0.3s;
+  user-select: none;
+}
+
