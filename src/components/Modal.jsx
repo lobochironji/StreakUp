@@ -47,7 +47,7 @@ return(
                         <div className="habit-input-11">
                             <p>Name</p>
                             <input name="habitName" type="text" onKeyDown={(event) => event.key === "Enter" && event.preventDefault()}></input>
-                            {props.warning && <p className="warning">{props.warning}</p>}   
+                           {<h3 className= {props.warning ? "warning-shown" : "warning-hidden"}>{props.warning}</h3>}   
                         </div>
                         <div className="habit-input-12">
                             <p>Strict Mode</p>

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-export default function Calendar({dateCurrent,habits,index,time}){
+export default function Calendar({dateCurrent,habits,index,time,setHabits}){
     const monthNames = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     const dayTitle = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     const year = time.getFullYear();
@@ -13,10 +13,9 @@ export default function Calendar({dateCurrent,habits,index,time}){
     useEffect(() => {
         const intervalId = setInterval(()=>{
             const nowMonth = new Date().getMonth();
-            console.log(currentMonth);
             if (nowMonth === currentMonth) {
-                console.log("sameMonth");
-            } else {
+            }
+            else {
                 setcurrentMonth(nowMonth);
                 setHabits(prevHabits => prevHabits.map(habit => ({...habit,completedDays: {}}))
                 );                

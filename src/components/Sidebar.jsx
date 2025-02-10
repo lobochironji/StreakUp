@@ -1,10 +1,8 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { FaBars, FaHome,FaUser } from "react-icons/fa";
 import { BiCog } from "react-icons/bi";
-import { AiTwotoneFileExclamation } from "react-icons/ai";
 import { NavLink } from 'react-router-dom'
 import { useState } from 'react'
-import Habits from '../Pages/Habits';
 
 export default function Sidebar({children, isOpen, setIsOpen}){
     function toggle(){
@@ -33,15 +31,9 @@ export default function Sidebar({children, isOpen, setIsOpen}){
             icon: <FaHome/>,
           },
           {
-            path: "/dashboard",
-            name: "Dashboard",
+            path: "/account",
+            name: "Account",
             icon: <FaUser />,
-          },
-   
-          {
-            path: "/pageTwo",
-            name: "Page Two",
-            icon: <AiTwotoneFileExclamation />,
           },
           {
             path: "/setting",

@@ -21,7 +21,8 @@ export default function Habits({isOpen,setIsOpen}){
         const intervalId = setInterval(()=>{
             const nowDate = new Date().getDate();
             if (nowDate === dateCurrent) {
-            } else {
+            } 
+            else {
                 setDateCurrent(nowDate);
                 setTime(new Date())
                 setHabits(prevHabits => prevHabits.map(habit => ({...habit,isDone: false,isSkipped: false, Streak: habit.StrictMode && !habit.isDone ? 0 : habit.Streak}))
@@ -59,7 +60,6 @@ function addHabit(event){
     }
 }
 
-console.log(habits);
 useEffect(() => {
     document.addEventListener("mousedown", ClickOutside);
     function ClickOutside(event) {
