@@ -1,5 +1,5 @@
-import Center from '/src/assets/Center.png'
-import Ring from'/src/assets/Ring.png'
+import Center from '/src/assets/center.png'
+import Ring from'/src/assets/ring.png'
 function Header(){
     return(
     <header>
